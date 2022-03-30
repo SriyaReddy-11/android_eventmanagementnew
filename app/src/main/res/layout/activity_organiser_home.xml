@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawe_layout"
+    android:fitsSystemWindows="true"
+
+    tools:openDrawer="start"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <include
+
+            layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".StudentHomeActivity"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+
+
+            <ImageView
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:src="@drawable/log"
+                android:visibility="gone"
+                android:layout_marginTop="0px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event management"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#304FFE"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/eventsrecyclerView"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/organiser_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        android:id="@+id/nv">
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
