@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EventManagement</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <!--    <string name="default_web_client_id">470340250960-barb9f2m1pankes8l56sih0qn7l6ms45.apps.googleusercontent.com</string>-->
+    <string name="client_id" >470340250960-barb9f2m1pankes8l56sih0qn7l6ms45.apps.googleusercontent.com</string>
+
+</resources>

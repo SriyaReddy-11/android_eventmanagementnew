@@ -1,0 +1,9 @@
+com.google.example.easypermissions.BuildConfig
+pub.devrel.easypermissions.AfterPermissionGranted
+pub.devrel.easypermissions.AppSettingsDialog
+pub.devrel.easypermissions.AppSettingsDialog$1
+pub.devrel.easypermissions.AppSettingsDialog$Builder
+pub.devrel.easypermissions.EasyPermissions
+pub.devrel.easypermissions.EasyPermissions$1
+pub.devrel.easypermissions.EasyPermissions$2
+pub.devrel.easypermissions.EasyPermissions$PermissionCallbacks
