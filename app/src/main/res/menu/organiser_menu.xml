@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="Home"/>
+
+    <item android:id="@+id/profile"
+        android:title="My Profile"/>
+    <item android:id="@+id/createEvents"
+        android:title="Create New Event"/>
+    <item android:id="@+id/myevents"
+        android:title="Manage Events"/>
+    <!--    <item android:id="@+id/upcommingevents"-->
+    <!--        android:title="Ongoing Events"/>-->
+    <item android:id="@+id/logout"
+        android:title="Logout"/>
+</menu>
