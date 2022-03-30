@@ -3,21 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_event_removed.xml" value="0.13652482269503546" />
-        <entry key="app/src/main/res/layout/activity_event_success.xml" value="0.13652482269503546" />
-        <entry key="app/src/main/res/layout/activity_organiser_events.xml" value="0.13652482269503546" />
-        <entry key="app/src/main/res/layout/activity_organiser_forgot.xml" value="0.13652482269503546" />
-        <entry key="app/src/main/res/layout/activity_organiser_home.xml" value="0.13652482269503546" />
-        <entry key="app/src/main/res/menu/organiser_menu.xml" value="0.2764102564102564" />
-        <entry key="app/src/main/res/menu/user_menu.xml" value="0.2764102564102564" />
+        <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.1" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK" />
 </project>
