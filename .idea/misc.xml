@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_customer_forgot.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_customer_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_organiser_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_organizer_register.xml" value="0.1" />
       </map>
     </option>
   </component>
