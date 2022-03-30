@@ -4,8 +4,11 @@
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/fa52e34b144e41018bb85aa02cb6f37e/jetified-play-services-tasks-18.0.1/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/fa52e34b144e41018bb85aa02cb6f37e/jetified-play-services-tasks-18.0.1/res" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/fa52e34b144e41018bb85aa02cb6f37e/jetified-play-services-tasks-18.0.1/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/fa52e34b144e41018bb85aa02cb6f37e/jetified-play-services-tasks-18.0.1/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/fa52e34b144e41018bb85aa02cb6f37e/jetified-play-services-tasks-18.0.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.google.android.gms/play-services-tasks/18.0.1/2e3c5d886f131c9c8ae2d93dcf32aa58dad438e3/play-services-tasks-18.0.1-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.google.android.gms/play-services-tasks/18.0.1/2e3c5d886f131c9c8ae2d93dcf32aa58dad438e3/play-services-tasks-18.0.1-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />

@@ -4,8 +4,12 @@
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8ff141ebd7803a17a21e3f6a721a2f44/jetified-play-services-auth-19.0.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8ff141ebd7803a17a21e3f6a721a2f44/jetified-play-services-auth-19.0.0/res" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8ff141ebd7803a17a21e3f6a721a2f44/jetified-play-services-auth-19.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8ff141ebd7803a17a21e3f6a721a2f44/jetified-play-services-auth-19.0.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8ff141ebd7803a17a21e3f6a721a2f44/jetified-play-services-auth-19.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8ff141ebd7803a17a21e3f6a721a2f44/jetified-play-services-auth-19.0.0/res" />
     </CLASSES>
     <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/19.0.0/3b59304365c13d789c43fe9eb65dfe174583aab6/play-services-auth-19.0.0-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/19.0.0/3b59304365c13d789c43fe9eb65dfe174583aab6/play-services-auth-19.0.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />

@@ -2,16 +2,22 @@
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.8.0@aar">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8c352020598dfe176a7680a80d4724f9/jetified-gifdecoder-4.8.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/ad0aaad13a474de691fedab5715ca042/jetified-gifdecoder-4.8.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8c352020598dfe176a7680a80d4724f9/jetified-gifdecoder-4.8.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8c352020598dfe176a7680a80d4724f9/jetified-gifdecoder-4.8.0/res" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/8c352020598dfe176a7680a80d4724f9/jetified-gifdecoder-4.8.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/ad0aaad13a474de691fedab5715ca042/jetified-gifdecoder-4.8.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/ad0aaad13a474de691fedab5715ca042/jetified-gifdecoder-4.8.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/ad0aaad13a474de691fedab5715ca042/jetified-gifdecoder-4.8.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.8.0/efaa5fafad842304486e8d5c6a77208b8531e25e/gifdecoder-4.8.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.8.0/efaa5fafad842304486e8d5c6a77208b8531e25e/gifdecoder-4.8.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.8.0/b868c1eef40822dacf2e1f08c2186b7acf3d4b6/gifdecoder-4.8.0-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.8.0/b868c1eef40822dacf2e1f08c2186b7acf3d4b6/gifdecoder-4.8.0-sources.jar!/" />
     </SOURCES>
   </library>

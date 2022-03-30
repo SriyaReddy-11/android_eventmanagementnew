@@ -2,16 +2,22 @@
   <library name="Gradle: com.firebaseui:firebase-ui-auth:4.3.2@aar">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/cbc0becd797514318ba13b5c69803f12/jetified-firebase-ui-auth-4.3.2/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/2ab5f170fac6082ceb2baba737345a31/jetified-firebase-ui-auth-4.3.2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/cbc0becd797514318ba13b5c69803f12/jetified-firebase-ui-auth-4.3.2/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/cbc0becd797514318ba13b5c69803f12/jetified-firebase-ui-auth-4.3.2/res" />
       <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/cbc0becd797514318ba13b5c69803f12/jetified-firebase-ui-auth-4.3.2/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/2ab5f170fac6082ceb2baba737345a31/jetified-firebase-ui-auth-4.3.2/res" />
+      <root url="file://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/2ab5f170fac6082ceb2baba737345a31/jetified-firebase-ui-auth-4.3.2/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/transforms-2/files-2.1/2ab5f170fac6082ceb2baba737345a31/jetified-firebase-ui-auth-4.3.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-auth/4.3.2/3ca7ca15481cdf56a1cfcd722e1554da36b4090e/firebase-ui-auth-4.3.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-auth/4.3.2/3ca7ca15481cdf56a1cfcd722e1554da36b4090e/firebase-ui-auth-4.3.2-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-auth/4.3.2/179ed12641b8d131ef2a878b4e26c54f10320ee4/firebase-ui-auth-4.3.2-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../EventManagement/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-auth/4.3.2/179ed12641b8d131ef2a878b4e26c54f10320ee4/firebase-ui-auth-4.3.2-sources.jar!/" />
     </SOURCES>
   </library>
