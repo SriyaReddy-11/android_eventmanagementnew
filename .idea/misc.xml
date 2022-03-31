@@ -9,6 +9,8 @@
         <entry key="app/src/main/res/layout/activity_customer_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_organiser_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_organizer_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_user_home.xml" value="0.1" />
       </map>
     </option>
   </component>
