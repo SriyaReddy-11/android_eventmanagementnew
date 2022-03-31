@@ -68,23 +68,4 @@ public class AddEventActivity extends AppCompatActivity {
                             // finish();
                         }).addOnFailureListener(er ->
                         {
-                            Toast.makeText(AddEventActivity.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
-                        });
-                    }else {
-                Event event = new Event(name.getText().toString(), desc.getText().toString(), date.getText().toString(), time.getText().toString(), location.getText().toString(), uid);
-                databaseReference.push().setValue(event).addOnSuccessListener(suc -> {
-                    Toast.makeText(AddEventActivity.this, "created", Toast.LENGTH_LONG).show();
-                    Intent i =new Intent(AddEventActivity.this,EventSuccessActivity.class);
-                    startActivity(i);
-                }).addOnFailureListener(fail -> {
-                    Toast.makeText(AddEventActivity.this, "Failed", Toast.LENGTH_LONG).show();
-                });
-            }
-
-
-
-        });
-
-
-    }
-}
+                           
