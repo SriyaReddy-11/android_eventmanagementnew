@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetailsActivity"
+    android:orientation="vertical"
+   >
+
+
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Management"
+        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:textColor="#000"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pic"
+
+        />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="The main goal of this application is to have a user-friendly, efficient access to the
+application at the user’s convenience. Especially, due to this pandemic, to avoid more
+gatherings organizers can schedule events and attendees can attend them at their
+comfort wherein the organizer can also know the number of the people interested in
+attending the events."
+        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:textColor="#000"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pp"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/btn_join"
+        android:text="Subscribe"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btn_book"
+        android:text="Book Event"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
