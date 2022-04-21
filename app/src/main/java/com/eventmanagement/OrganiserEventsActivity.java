@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.eventmanagement.Adapters.RVAdapter;
@@ -18,6 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -26,18 +29,22 @@ public class OrganiserEventsActivity extends AppCompatActivity {
     RVAdapter rvAdapter;
     ArrayList<Event> events;
     DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organiser_events);
+        getSupportActionBar().setTitle("My Events");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         eventsRecyclerView = findViewById(R.id.eventsrecyclerView);
         eventsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         rvAdapter = new RVAdapter(new RVAdapter.ClickListener() {
             @Override
             public void onClick(int position) {
-                Intent i =new Intent(OrganiserEventsActivity.this,AddEventActivity.class);
-                i.putExtra("event",events.get(position));
-                startActivity(i);
+            Intent i =new Intent(OrganiserEventsActivity.this,AddEventActivity.class);
+            i.putExtra("event",events.get(position));
+            startActivity(i);
             }
 
             @Override
@@ -71,7 +78,7 @@ public class OrganiserEventsActivity extends AppCompatActivity {
 
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference(Event.class.getSimpleName());
-        fetchItems();
+      fetchItems();
 
     }
 
@@ -103,5 +110,16 @@ public class OrganiserEventsActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         fetchItems();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
