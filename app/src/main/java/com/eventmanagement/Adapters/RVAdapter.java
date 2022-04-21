@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.eventmanagement.Entities.Event;
 import com.eventmanagement.R;
 
@@ -54,6 +55,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EventVH> {
     @Override
     public void onBindViewHolder(@NonNull EventVH holder, int position) {
         holder.eventName.setText(list.get(position).getEventName());
+        Glide.with(holder.event_image.getContext()).load(list.get(position).getImageUrl()).into(holder.event_image);
     }
 
     @Override
@@ -66,12 +68,14 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.EventVH> {
         public TextView eventName;
         public ImageView imageView;
         public ImageView imgedit;
+        public  ImageView event_image;
 
         public EventVH(@NonNull View itemView) {
             super(itemView);
             eventName = itemView.findViewById(R.id.name);
             imageView = itemView.findViewById(R.id.imgdelete);
             imgedit= itemView.findViewById(R.id.imgedit);
+            event_image=itemView.findViewById(R.id.event_image);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
