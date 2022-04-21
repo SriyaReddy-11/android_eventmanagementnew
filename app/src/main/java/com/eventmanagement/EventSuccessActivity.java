@@ -36,4 +36,4 @@ public class EventSuccessActivity extends AppCompatActivity {
         };
         t1.start();
     }
-}
+};
