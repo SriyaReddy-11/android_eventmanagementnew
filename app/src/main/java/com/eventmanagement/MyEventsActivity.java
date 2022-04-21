@@ -1,4 +1,5 @@
-package com.eventmanagement;
+
+            package com.eventmanagement;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.eventmanagement.Adapters.UserRVAdapter;
@@ -31,6 +33,9 @@ public class MyEventsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_events);
+        getSupportActionBar().setTitle("My Subscriptions");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         eventsRecyclerView = findViewById(R.id.eventsrecyclerView);
         eventsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         rvAdapter = new UserRVAdapter(new UserRVAdapter.ClickListener() {
@@ -38,7 +43,7 @@ public class MyEventsActivity extends AppCompatActivity {
             public void onClick(int position) {
                 Intent i =new Intent(MyEventsActivity.this,EventDetailsActivity.class);
                 i.putExtra("event",events.get(position));
-                //   Toast.makeText(MyEventsActivity.this,events.get(position).getUpperKey(),Toast.LENGTH_LONG).show();
+             //   Toast.makeText(MyEventsActivity.this,events.get(position).getUpperKey(),Toast.LENGTH_LONG).show();
                 startActivity(i);
             }
 
@@ -58,7 +63,7 @@ public class MyEventsActivity extends AppCompatActivity {
     public void fetchItems(){
         String uid=  FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        Query query=databaseReference.orderByChild("customer").equalTo(uid);
+         Query query=databaseReference.orderByChild("customer").equalTo(uid);
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -70,7 +75,7 @@ public class MyEventsActivity extends AppCompatActivity {
                     EventStudent event=data.getValue(EventStudent.class);
                     event.setKey(data.getKey());
                     Event event1= event.getEvent();
-                    event1.setUpperKey(data.getKey());
+                    event1.setUpperKey(event.getKey());
                     events.add(event1);
                 }
                 rvAdapter.setItems(events);
@@ -87,5 +92,15 @@ public class MyEventsActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         fetchItems();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
