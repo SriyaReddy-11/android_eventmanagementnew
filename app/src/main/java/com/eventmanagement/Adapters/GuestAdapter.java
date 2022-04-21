@@ -57,15 +57,17 @@ this.clickListener=clickListener;
         public TextView eventName;
         public ImageView imageView;
         public ImageView imgedit;
+        public ImageView event_image;
         public GuestVH(@NonNull View itemView) {
 
             super(itemView);
-
+            event_image=itemView.findViewById(R.id.event_image);
             eventName = itemView.findViewById(R.id.name);
             imageView = itemView.findViewById(R.id.imgdelete);
             imgedit= itemView.findViewById(R.id.imgedit);
 
             imgedit.setVisibility(View.GONE);
+            event_image.setVisibility(View.GONE);
 
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
