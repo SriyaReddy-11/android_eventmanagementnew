@@ -1,94 +1,103 @@
 package com.eventmanagement;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.eventmanagement.Entities.BookEntity;
+import com.eventmanagement.Adapters.RVAdapter;
+import com.eventmanagement.Adapters.UserRVAdapter;
 import com.eventmanagement.Entities.Event;
-import com.eventmanagement.Entities.EventStudent;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
-public class EventDetailsActivity extends AppCompatActivity {
-TextView header;
-TextView desc;
-Button submit,btn_book;
+import java.util.ArrayList;
+
+public class EventsListActivity extends AppCompatActivity {
+    RecyclerView eventsRecyclerView;
+    UserRVAdapter rvAdapter;
+    ArrayList<Event> events;
     DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_details);
-        Event ievent = getIntent().getParcelableExtra("event");
+        setContentView(R.layout.activity_events_list);
+        getSupportActionBar().setTitle("Events");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        eventsRecyclerView = findViewById(R.id.eventsrecyclerView);
+        eventsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        rvAdapter = new UserRVAdapter(new UserRVAdapter.ClickListener() {
+            @Override
+            public void onClick(int position) {
+                Intent i =new Intent(EventsListActivity.this,EventDetailsActivity.class);
+                i.putExtra("event",events.get(position));
+                startActivity(i);
+            }
 
-        header=findViewById(R.id.eventName);
-        desc=findViewById(R.id.desc);
-        submit=findViewById(R.id.btn_join);
+
+        });
+        rvAdapter.setItems(new ArrayList<>());
+
+        eventsRecyclerView.setAdapter(rvAdapter);
+
+
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        databaseReference = db.getReference(EventStudent.class.getSimpleName());
+        databaseReference = db.getReference(Event.class.getSimpleName());
+        fetchItems();
+
+    }
+
+    public void fetchItems(){
         String uid=  FirebaseAuth.getInstance().getCurrentUser().getUid();
-        EventStudent eventStudent=new EventStudent(ievent,uid,FirebaseAuth.getInstance().getCurrentUser().getEmail());
 
-        btn_book=findViewById(R.id.btn_book);
+       // Query query=databaseReference.orderByChild("orgId").equalTo(uid);
 
-
-
-        if(ievent.getUpperKey()!=null){
-            submit.setText("unsubscribe");
-        }
-
-        if(ievent!=null){
-            header.setText(ievent.getEventName());
-            desc.setText(ievent.getDescription());
-            submit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (ievent.getUpperKey() == null) {
-                        databaseReference.push().setValue(eventStudent).addOnSuccessListener(suc -> {
-                           // Toast.makeText(EventDetailsActivity.this, "created", Toast.LENGTH_LONG).show();
-                            Intent intentg= new Intent(EventDetailsActivity.this, UserHomeActivity.class);
-                            startActivity(intentg);
-                            // finish();
-                        }).addOnFailureListener(fail -> {
-                            Toast.makeText(EventDetailsActivity.this, "Failed", Toast.LENGTH_LONG).show();
-                        });
-                    }else{
-                        databaseReference.child(ievent.getUpperKey()).removeValue().addOnSuccessListener(suc->{
-                            Toast.makeText(EventDetailsActivity.this, "deleted Event",Toast.LENGTH_LONG).show();
-                            finish();
-
-                        }).addOnFailureListener(er->{
-                            Toast.makeText(EventDetailsActivity.this, er.getMessage(),Toast.LENGTH_LONG).show();
-
-
-
-                        });
-                    }
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                events=new ArrayList<>();
+                for(DataSnapshot data:snapshot.getChildren()){
+                    Event event=data.getValue(Event.class);
+                    event.setKey(data.getKey());
+                    events.add(event);
                 }
-            });
+                rvAdapter.setItems(events);
+                rvAdapter.notifyDataSetChanged();
+            }
 
-            BookEntity bookEntity = new BookEntity(ievent, uid, FirebaseAuth.getInstance().getCurrentUser().getEmail(),"pending");
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-            btn_book.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    FirebaseDatabase db = FirebaseDatabase.getInstance();
-                    databaseReference = db.getReference(BookEntity.class.getSimpleName());
+            }
+        });
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        fetchItems();
+    }
 
-                    databaseReference.push().setValue(bookEntity).addOnSuccessListener(suc -> {
-                        Toast.makeText(EventDetailsActivity.this, "Event Booked Successfully", Toast.LENGTH_LONG).show();
-                        finish();
-                    }).addOnFailureListener(fail -> {
-                        Toast.makeText(EventDetailsActivity.this, "Failed", Toast.LENGTH_LONG).show();
-                    });
-                }
-            });
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
